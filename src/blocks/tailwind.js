@@ -136,6 +136,10 @@ import { source as acc1 } from './data/accordion-1';
 import { source as acc1s } from './data/icons/accordion-1';
 import { source as pg1 } from './data/grid-1';
 import { source as pg1s } from './data/icons/grid-1';
+import { source as btn1 } from './data/button-1';
+import { source as btn1s } from './data/icons/button-1';
+import { source as tgl1 } from './data/toggle-1';
+import { source as tgl1s } from './data/icons/toggle-1';
 
 const getSvgHtml = (svg) => {
   if (typeof window === 'undefined') return '';
@@ -693,6 +697,20 @@ const sources = [
     content: pg1,
     category: 'Extra',
   },
+  {
+    id: 'button-block-1',
+    class: '',
+    label: btn1s,
+    content: btn1,
+    category: 'Basic',
+  },
+  {
+    id: 'toggle-block-1',
+    class: '',
+    label: tgl1s,
+    content: tgl1,
+    category: 'Basic',
+  },
 ];
 
 export default (editor, options = {}) => {
@@ -700,7 +718,8 @@ export default (editor, options = {}) => {
 
   sources.forEach((s) => {
     bm.add(s.id, {
-      label: getSvgHtml(editor.$(s.label).get(0)),
+      media: getSvgHtml(editor.$(s.label).get(0)),
+      label: s.id,
       attributes: { class: `${s.class} block-full-width` },
       content: s.content,
       category: {
