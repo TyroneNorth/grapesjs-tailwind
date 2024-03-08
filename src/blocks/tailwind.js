@@ -140,6 +140,14 @@ import { source as btn1 } from './data/button-1';
 import { source as btn1s } from './data/icons/button-1';
 import { source as tgl1 } from './data/toggle-1';
 import { source as tgl1s } from './data/icons/toggle-1';
+import { source as cd1 } from './data/card-1';
+import { source as cd1s } from './data/icons/card-1';
+import { source as pb1 } from './data/progress-bar-1';
+import { source as pb1s } from './data/icons/progress-bar-1';
+import { source as bn1 } from './data/banner-1';
+import { source as bn1s } from './data/icons/banner-1';
+import { source as bn2 } from './data/banner-2';
+import { source as bn2s } from './data/icons/banner-2';
 
 const getSvgHtml = (svg) => {
   if (typeof window === 'undefined') return '';
@@ -710,6 +718,34 @@ const sources = [
     label: tgl1s,
     content: tgl1,
     category: 'Basic',
+  },
+  {
+    id: 'card-block-1',
+    class: '',
+    label: cd1s,
+    content: cd1,
+    category: 'Basic',
+  },
+  {
+    id: 'progress-bar-block-1',
+    class: '',
+    label: pb1s,
+    content: pb1,
+    category: 'Basic',
+  },
+  {
+    id: 'banner-block-1',
+    class: '',
+    label: bn1s,
+    content: bn1,
+    category: 'Banner',
+  },
+  {
+    id: 'banner-block-2',
+    class: '',
+    label: bn2s,
+    content: bn2,
+    category: 'Banner',
   },
 ];
 
